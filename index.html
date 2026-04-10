@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nadina — Pastelería · Café & Arte</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="img/logo.png" alt="Nadina Pastelería">
+    </a>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Inicio</a>
+    <a href="tortas.html">Tortas</a>
+  </nav>
+
+  <a href="carrito.html" class="btn-carrito">
+    <span class="carrito-icono">🛒</span>
+    Carrito
+    <span id="carrito-count" style="display:none">0</span>
+  </a>
+</header>
+
+<section class="hero">
+  <span class="hero-ornamento">✦ ✦ ✦</span>
+  <h2>Pastelería artesanal<br>hecha con amor</h2>
+  <p>En Nadina creamos momentos dulces únicos. Pedí tu torta de forma online con 48hs de anticipación.</p>
+  <div class="botones">
+    <a href="tortas.html" class="btn">Ver Catálogo</a>
+    <a href="#nosotros" class="btn-outline">Nuestra Esencia</a>
+  </div>
+</section>
+
+<section class="destacados" id="tortas">
+  <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+    <h2>Nuestras especialidades</h2>
+    <div class="ornamento">✦</div>
+  </div>
+
+  <div class="productos">
+    <div class="card">
+        <div class="card-img-wrap carrusel-hover">
+            <div class="carrusel-track">
+                <img src="img/torta-matilda.jpeg" alt="Torta Matilda" class="img-carrusel">
+            </div>
+        </div>
+        <div class="card-body">
+            <h3>Torta Matilda</h3>
+            <p class="descripcion">Húmeda, intensa y cubierta de ganache artesanal.</p>
+            <div class="selector-tamanio">
+                <select class="tamanio-select" onchange="actualizarPrecioCard(this)">
+                    <option value="16" data-precio="8500">16cm (6-8 porciones)</option>
+                    <option value="20" data-precio="12000">20cm (12-14 porciones)</option>
+                </select>
+            </div>
+            <span class="precio-display">$8.500</span>
+            <button onclick="prepararCompra(this, 'Torta Matilda', 'img/torta-matilda.jpeg')">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-img-wrap carrusel-hover">
+            <div class="carrusel-track">
+                <img src="img/brownie1.jpeg" alt="Brownie" class="img-carrusel">
+                <img src="img/brownie2.jpeg" alt="Brownie Interior" class="img-carrusel">
+            </div>
+        </div>
+        <div class="card-body">
+            <h3>Brownie & Frutos Rojos</h3>
+            <p class="descripcion">Base de brownie, dulce de leche, crema y frutos frescos.</p>
+            <div class="selector-tamanio">
+                <select class="tamanio-select" onchange="actualizarPrecioCard(this)">
+                    <option value="16" data-precio="8200">16cm (6-8 porciones)</option>
+                    <option value="20" data-precio="11500">20cm (12-14 porciones)</option>
+                </select>
+            </div>
+            <span class="precio-display">$8.200</span>
+            <button onclick="prepararCompra(this, 'Brownie con Frutos Rojos', 'img/brownie1.jpeg')">Agregar al carrito</button>
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-img-wrap carrusel-hover">
+            <div class="carrusel-track">
+                <img src="img/redvelvet-1.jpeg" alt="Red Velvet" class="img-carrusel">
+                <img src="img/redvelvet-2.jpeg" alt="Red Velvet Interior" class="img-carrusel">
+            </div>
+        </div>
+        <div class="card-body">
+            <h3>Red Velvet</h3>
+            <p class="descripcion">Clásico bizcochuelo rojo aterciopelado con un suave toque de cacao y nuestra crema de queso crema (frosting).</p>
+            <div class="selector-tamanio">
+                <label>Elegir tamaño:</label>
+                <select class="tamanio-select" onchange="actualizarPrecioCard(this)">
+                    <option value="16" data-precio="9000" data-porciones="6-8">16cm (6-8 porciones)</option>
+                    <option value="20" data-precio="13000" data-porciones="12-14">20cm (12-14 porciones)</option>
+                </select>
+            </div>
+            <span class="precio-display">$9.000</span>
+            <button onclick="prepararCompra(this, 'Red Velvet', 'img/redvelvet-1.jpeg')">Agregar al carrito</button>
+        </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top: 48px;">
+    <a href="tortas.html" class="btn-outline">Ver todas las tortas</a>
+  </div>
+</section>
+
+<section id="nosotros" style="background:var(--beige); padding: 80px 48px; text-align:center;">
+  <h2>Pastelería · Café & Arte</h2>
+  <div class="ornamento">✦</div>
+  <p style="max-width:600px; margin:0 auto; color:var(--texto-suave); font-weight:300; line-height:1.8;">
+    Un refugio en Palermo donde el arte y los sabores auténticos se encuentran. 
+    Ingredientes seleccionados y procesos artesanales.
+  </p>
+</section>
+
+<footer style="background: var(--verde); color: var(--beige-claro); padding: 60px 40px 20px;">
+  <div class="footer-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
+    <div class="footer-brand">
+      <img src="img/logo.png" alt="Nadina" style="height: 45px; margin-bottom: 10px;">
+      <p style="font-size: 14px; opacity: 0.8;">Café & Arte artesanal</p>
+    </div>
+
+    <div class="footer-info" style="display: flex; gap: 50px; flex-wrap: wrap;">
+      <div class="footer-item">
+        <strong style="display:block; color:var(--beige); margin-bottom: 5px;">📍 Visitanos</strong>
+        <p style="font-size: 14px; opacity: 0.8;">Costa Rica 4824, Palermo</p>
+      </div>
+      <div class="footer-item">
+        <strong style="display:block; color:var(--beige); margin-bottom: 5px;">📱 Escribinos</strong>
+        <p style="font-size: 14px; opacity: 0.8;">+54 9 11 3633-7422</p>
+      </div>
+      <div class="footer-item">
+        <strong style="display:block; color:var(--beige); margin-bottom: 5px;">📸 Seguinos</strong>
+        <p style="font-size: 14px; opacity: 0.8;"><a href="https://instagram.com/nadinapasteleria">@nadinapasteleria</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 12px; opacity: 0.5;">
+    <p>&copy; 2024 Nadina Pastelería · Pedidos con 48hs de anticipación</p>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
